@@ -1,6 +1,6 @@
 .catalog:
   name: "Minecraft"
-  version: "v1.11"
+  version: "v1.11.2"
   description: "Minecraft server"
   uuid: minecraft-0
   questions:
@@ -31,7 +31,8 @@
       options:
         - LATEST
         - SNAPSHOT
-        - 1.11
+        - 1.11.2
+        - 1.10.2
         - 1.8.9
         - 1.7.10
         - 1.6.4
@@ -57,6 +58,11 @@
         - creative
         - adventure
         - spectator
+    - variable: "ONLINE_MODE"
+      label: "Default online mode"
+      description: "Select if online mode is activated.  Default is active"
+      default: true
+      type: "boolean"
     - variable: "LEVEL_TYPE"
       label: "Level Type"
       description: ""
@@ -68,6 +74,7 @@
         - LARGEBIOMES
         - AMPLIFIED
         - CUSTOMIZED
+    - variable: ""
     - variable: "GENERATOR_SETTINGS"
       label: "Generator Settings"
       description: "Custom generator settings. Only used for level types FLAT and CUSTOMIZED."
@@ -99,6 +106,10 @@
     - variable: "WORLD"
       label: "World URL"
       description: "URL to download zipped world directory"
+      type: "string"
+    - variable: "MODPACK"
+      label: "Mod Pack"
+      description: "You can specify the URL of a mod pack to download and install into 'mods'"
       type: "string"
     - variable: "DATA_VOLUME"
       label: "Data Volume"
